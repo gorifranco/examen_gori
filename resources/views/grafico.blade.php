@@ -8,9 +8,16 @@
         </h2>
     </x-slot>
 
-    <div class="py-12" style="width: 1000">
-        <canvas id="myChart"></canvas>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
     </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
@@ -44,6 +51,22 @@ const myChart = new Chart(ctx, {
         }]
     },
     options: {
+        plugins: {
+            title: {
+                display: true,
+                text: 'Comparativo ventas'
+            },
+            subtitle: {
+                display: true,
+                text: '2020-2021'
+            },
+                    legend: {
+                display: true,
+                position: 'right',
+                align: 'centre',
+        }
+        },
+
         animations: {
       tension: {
         duration: 500,
