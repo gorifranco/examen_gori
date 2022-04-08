@@ -16,5 +16,4 @@ class examenController extends Controller
         ->with('data2021', $data2021);
         
     }
-
 }
