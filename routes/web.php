@@ -26,6 +26,4 @@ Route::get('/dashboard', function () {
 // Rutas examen
 Route::get('/grafico', [examenController::class, 'crearGrafico'])->middleware(['auth'])->name('grafico');
 
-
-
 require __DIR__.'/auth.php';
