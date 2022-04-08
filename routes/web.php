@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\examenController;
+use App\Http\Controllers\examenController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +24,7 @@ Route::get('/dashboard', function () {
 
 
 // Rutas examen
-Route::get('/grafico', [examenController::class, 'crearGrafico'])->name('grafico');
+Route::get('/grafico', [examenController::class, 'crearGrafico'])->middleware(['auth'])->name('grafico');
 
 
 

@@ -12,5 +12,6 @@ class examenController extends Controller
 
         return view('grafico')->with('data', $data)
         ->with('labels', $labels);
+        
     }
 }

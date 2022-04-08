@@ -1,20 +1,19 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Comparativo ventas 2020-2021') }}
+            {{ __('Comparativo ventas Z 2020-2021') }}
         </h2>
     </x-slot>
 
     <div class="py-12">
         <canvas id="myChart"></canvas>
     </div>
-</x-app-layout>
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<canvas id="myChart" width="400" height="400"></canvas>
 <script>
 const ctx = document.getElementById('myChart').getContext('2d');
 const myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'line',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
         datasets: [{
@@ -48,3 +47,4 @@ const myChart = new Chart(ctx, {
     }
 });
 </script>
+</x-app-layout>
